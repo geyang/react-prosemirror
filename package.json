@@ -1,0 +1,30 @@
+{
+  "name": "react-es6-template",
+  "version": "0.0.0",
+  "description": "a template for react es6 components. Contains webpack configuration and document generator.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/episodeyang/react-es6-template.git"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "component",
+    "es6",
+    "component",
+    "react-docgen",
+    "docgen",
+    "webpack",
+    "react-hot-reload"
+  ],
+  "author": "Ge Yang <yangge1987@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/episodeyang/react-es6-template/issues"
+  },
+  "homepage": "https://github.com/episodeyang/react-es6-template#readme"
+}
