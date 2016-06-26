@@ -48,10 +48,12 @@ export default function Readme({}) {
       <HappySandwichMakerExample/>
       ### Props
       {`This table below is generated automatically`}
-      <PropsTable propMetaData={HappySandwichMakerAST.props}
-      />{`
+      <div className="table-container horizontal-scroll">
+        <PropsTable propMetaData={HappySandwichMakerAST.props}/>
+      </div>
+      {`
       ### Usage Example
-      
+
       The source code below of the example above is loaded using the webpack raw loader.`}
       <Highlight>{HappySandwichMakerSource}</Highlight>
     </Markdown>
