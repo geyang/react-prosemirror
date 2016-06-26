@@ -15,30 +15,20 @@ const HappySandwichMakerAST = require("!!react-docgen!../HappySandwichMaker");
 export default function Readme({}) {
   return (
     <Markdown stripIndent={true}>
-      {`
       # React ES6 Component Template
-      `}
       <Badge color="#23aaff" subject="VERSION" status="1.0.0"/>
-      {`
-      1. some stuff
-      2. some other stuff
-
+      {`A template for react components written with es6 syntax.`}
       ## Usage
-      `}
       <Highlight>
-        npm install @uber/react-color-scales
+        git clone https://github.com/episodeyang/react-es6-template
       </Highlight>
-      {`
-      ## \`HappySandwichMaker\` Component
-
-      This component makes you a delicious Subway sandwich.      `}
-      <HappySandwichMakerExample/>{`
-      ## Props
-      `}
+      ## Example Component: `HappySandwichMaker`
+      {`This component makes you a delicious Subway sandwich.`}
+      <HappySandwichMakerExample/>
+      ### Props
       <PropsTable propMetaData={HappySandwichMakerAST.props}
-      />{`
-      ## Code
-      `}
+      />
+      ### Code
       <Highlight>{HappySandwichMakerSource}</Highlight>
     </Markdown>
   )

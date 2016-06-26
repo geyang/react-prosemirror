@@ -5,6 +5,18 @@ import React, {Component, PropTypes} from "react";
 
 var {func, bool, string, oneOf} = PropTypes;
 
+const style = {
+  backgroundColor: "red",
+  color: "white",
+  fontSize: "23px",
+  fontWeight: 600,
+  lineHeight: "23px",
+  padding: "12px",
+  border: "none",
+  borderRight: "solid 2px #444",
+  borderBottom: "solid 2px #444",
+  borderRadius: "4px"
+};
 /**
  * description of the component
  */
@@ -37,15 +49,11 @@ export default class HappySandwichMaker extends Component {
 
   render() {
     var {children} = this.props;
-    // console.log([children]);
     return (
-      <div>
-        <button style={{     }}>
-          I am a giant red button (and I'm not flat)
+      <div style={{"display": "flex", flexDirection: "row", justifyContent: "center", width: "100%"}}>
+        <button style={{...style, flex: "0 0 auto"}}>
+          I am a giant red button
         </button>
-        <pre>
-          {children}
-        </pre>
       </div>
     );
   }

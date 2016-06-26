@@ -1,7 +1,7 @@
-
 body {
+  color: #2a2a2a;
   font-size: 1.0em;
-  color: #4a4a4a;
+  line-height: 1.7142857em;
 }
 a {
   text-decoration: none;
@@ -36,16 +36,20 @@ code {
   font-size: 1em;
   font-family: Menlo, Consolas, Monaco, monospace, serif;
 }
+pre > code {
+  font-size: 0.9em;
+}
 table {
   color: #444;
   font-weight: 200;
   border-spacing: 0;
 }
 table > thead {
-  font-weight: 400;
+  font-weight: 300;
 }
 table > tbody {
-  border-bottom: 1px solid #ccc;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 th, td {
   text-align: left;
@@ -63,6 +67,9 @@ td > p:last-child {
 th {
   border-bottom: solid 2px #ddd;
 }
-table > tr > th {
-  border-right: 2px solid #ececec;
+table tr:hover {
+  background-color: rgba(0, 113, 96, 0.05);
+}
+table > tbody tr:last-child > td {
+  border-bottom: solid 1px #eee;
 }

@@ -13,8 +13,8 @@ var _color = Color(color);
 var style = {
   fontSize: "10px",
   color: color,
-  height: "2.em",
-  lineHeight: "2.em",
+  height: "1.8em",
+  lineHeight: "1.8em",
   backgroundColor: _color.clearer(0.85).rgbaString(),
   border: `1px solid ${color}`,
   padding: "0 0.5em",
