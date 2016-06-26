@@ -56,8 +56,8 @@ table {
   font-weight: 200;
   border-spacing: 0;
 }
-table > thead {
-  font-weight: 300;
+table th {
+  font-weight: 300!important;
 }
 table > tbody {
   font-weight: 300;
