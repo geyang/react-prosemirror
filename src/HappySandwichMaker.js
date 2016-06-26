@@ -7,6 +7,7 @@ var {func, bool, string, oneOf} = PropTypes;
 
 const style = {
   backgroundColor: "red",
+  margin: 0,
   color: "white",
   fontSize: "23px",
   fontWeight: 600,
@@ -47,13 +48,44 @@ export default class HappySandwichMaker extends Component {
     lattice: true
   };
 
+  wisdoms = {
+    0: {text: "Click Me!", action: "next", color: "#49CAF5"},
+    1: {text: "I can make you sandwiches!", action: "next", color: "rgb(251, 155, 165)"},
+    2: {
+      text: "Here are the places to pick it up!",
+      action: "link",
+      href: "http://www.yelp.com/c/sf/sandwiches",
+      color: "#A1D490"
+    }
+  };
+
+  componentWillMount() {
+    this.setState({currentIndex: 0});
+  }
+
+  getCurrentState() {
+    return this.wisdoms[this.state.currentIndex];
+  }
+
+  next() {
+    console.log(this);
+    this.setState({currentIndex: (this.state.currentIndex || 0) + 1})
+  }
+
   render() {
     var {children} = this.props;
+    var {color, text, action, href} = this.getCurrentState();
     return (
       <div style={{"display": "flex", flexDirection: "row", justifyContent: "center", width: "100%"}}>
-        <button style={{...style, flex: "0 0 auto"}}>
-          I am a giant red button
-        </button>
+        {(action == "next") ?
+          <button style={{...style, flex: "0 0 auto", backgroundColor: color}} onClick={this.next.bind(this)}>
+            {text}
+          </button> :
+          <a style={{...style, flex: "0 0 auto", backgroundColor: color}} href={href}>
+            {text}
+          </a>
+        }
+
       </div>
     );
   }

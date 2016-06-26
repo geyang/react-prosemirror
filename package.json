@@ -14,6 +14,7 @@
     "coveralls": "cat ./coverage/istanbul/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "plato": "plato -d coverage/plato dist/index.js",
     "test": "npm run istanbul && npm run coveralls",
+    "gh-pages": "git add dist && git ci -m 'BUILD DOC' && git subtree push --prefix dist/example origin gh-pages",
     "build-docs": "webpack --progress --profile --colors --config webpack.build-docs.config.js",
     "serve-docs": "webpack-dev-server --progress --profile --colors --hot --config webpack.develop.config.js"
   },

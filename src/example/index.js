@@ -1,6 +1,7 @@
 /**
  * Created by ge on 6/23/16.
  */
+require('./typesetting-basic.css');
 
 import React from "react";
 import {render} from "react-dom";

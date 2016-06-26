@@ -7,6 +7,11 @@ a {
   text-decoration: none;
   text-decoration-color: none;
 }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
 h1 {
   font-size: 3.0em;
   font-weight: 200;
@@ -16,7 +21,7 @@ h2 {
   font-weight: 200;
 }
 h3 {
-  font-size: 2.0em;
+  font-size: 1.8em;
   font-weight: 400;
 }
 h4 {
@@ -35,6 +40,13 @@ h6 {
 code {
   font-size: 1em;
   font-family: Menlo, Consolas, Monaco, monospace, serif;
+}
+div > code, p > code {
+  color: red;
+  background-color: #f6f6f6;
+  border-radius: 2px;
+  font-size: 0.9em;
+  padding: 4px 7px;
 }
 pre > code {
   font-size: 0.9em;
