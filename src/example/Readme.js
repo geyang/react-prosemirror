@@ -49,9 +49,10 @@ export default function Readme({}) {
       ### Props
       {`This table below is generated automatically`}
       <PropsTable propMetaData={HappySandwichMakerAST.props}
-      />
-      ### Code
-      {`The source code below of the example above is loaded using the webpack raw loader.`}
+      />{`
+      ### Usage Example
+      
+      The source code below of the example above is loaded using the webpack raw loader.`}
       <Highlight>{HappySandwichMakerSource}</Highlight>
     </Markdown>
   )
