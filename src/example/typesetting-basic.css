@@ -59,6 +59,16 @@ div > code, p > code {
   padding: 4px 7px;
 }
 
+blockquote {
+  font-weight: bold;
+  font-style: italic;
+  border-left: solid 10px rgba(7, 116, 141, 0.31);
+  padding: 20px 32px;
+  margin: 16px 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  color: rgba(11, 79, 113, 0.46);
+}
 pre {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -102,11 +112,11 @@ td {
   vertical-align: top;
 }
 
-td > p:first-child {
+p:first-child {
   margin-top: 0;
 }
 
-td > p:last-child {
+p:last-child {
   margin-bottom: 0;
 }
 
