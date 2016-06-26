@@ -1,0 +1,68 @@
+
+body {
+  font-size: 1.0em;
+  color: #4a4a4a;
+}
+a {
+  text-decoration: none;
+  text-decoration-color: none;
+}
+h1 {
+  font-size: 3.0em;
+  font-weight: 200;
+}
+h2 {
+  font-size: 2.3em;
+  font-weight: 200;
+}
+h3 {
+  font-size: 2.0em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1.0em;
+  font-weight: 200;
+  font-style: italic;
+}
+code {
+  font-size: 1em;
+  font-family: Menlo, Consolas, Monaco, monospace, serif;
+}
+table {
+  color: #444;
+  font-weight: 200;
+  border-spacing: 0;
+}
+table > thead {
+  font-weight: 400;
+}
+table > tbody {
+  border-bottom: 1px solid #ccc;
+}
+th, td {
+  text-align: left;
+  padding: 10px 10px;
+}
+td {
+  vertical-align: top;
+}
+td > p:first-child {
+  margin-top: 0;
+}
+td > p:last-child {
+  margin-bottom: 0;
+}
+th {
+  border-bottom: solid 2px #ddd;
+}
+table > tr > th {
+  border-right: 2px solid #ececec;
+}

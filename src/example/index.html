@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>React ES6 Component Template</title>
+  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/tomorrow.css">
+  <link rel="stylesheet" href="typesetting-basic.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: "Lato"
+    }
+
+    pre {
+      padding: 32px;
+      background-color: #F8F8F9;
+      margin-bottom: 32px;
+    }
+
+    pre code.hljs {
+      background-color: #F8F8F9;
+      padding: 0;
+    }
+
+    .sample-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .sample-container > {
+      flex: 1 1 auto;
+    }
+
+    .layout-container {
+      position: relative;
+    }
+
+    .layout-container > * {
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 90%;
+    }
+
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .flex-fixed {
+      flex: 0 0 auto;
+    }
+
+    .flex-fluid {
+      flex: 1 1 auto;
+    }
+
+    .brand, .menu-item {
+      line-height: 54px;
+    }
+
+    .brand {
+      color: rgba(0, 113, 96, 0.98);
+    }
+
+    .brand, .menu-item {
+      cursor: pointer;
+      display: inline-block;
+      border-top: 4px solid white;
+      border-bottom: 4px solid white;
+      box-sizing: border-box;
+      transition: all 0.3s linear;
+    }
+
+    .brand:hover, .menu-item:hover {
+      /*text-shadow: 0 0 2px rgba(12, 12, 12, 0.95);*/
+      border-bottom: 4px solid rgba(0, 113, 96, 0.80);
+    }
+
+    .menu-item {
+      padding: 0 7px;
+      color: rgba(0, 113, 96, 0.98);
+    }
+
+    .vertical-scroll {
+      overflow-y: auto;
+    }
+
+    body.fixed-height {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    article > h1 {
+      font-weight: 400;
+    }
+
+  </style>
+</head>
+<body class="flex-column fixed-height">
+<div class="layout-container flex-fixed">
+  <div class="flex-row">
+    <div class="brand flex-fixed" style="font-size: 24px">
+      Data Vis Components
+    </div>
+    <div class="flex-fluid"></div>
+    <a class="menu-item flex-fixed" href="https://code.yourdomain.com/project/board/5878/">Issue Tracker</a>
+    <a class="menu-item flex-fixed" href="https://code.yourdomain.com/diffusion/VIREACTCO/">Repository</a>
+  </div>
+</div>
+<div class="layout-container flex-fluid vertical-scroll">
+  <article id="readme-container" style="padding-top: 30px"></article>
+</div>
+<script src="vendor.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
