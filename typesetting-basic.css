@@ -1,0 +1,133 @@
+body {
+  color: #2a2a2a;
+  font-size: 1.0em;
+  line-height: 1.7142857em;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 3.0em;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2.3em;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.0em;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.0em;
+  font-weight: 200;
+  font-style: italic;
+}
+
+code {
+  font-size: 1em;
+  font-family: Menlo, Consolas, Monaco, monospace, serif;
+}
+
+div > code, p > code {
+  color: red;
+  background-color: #f6f6f6;
+  border-radius: 2px;
+  font-size: 0.9em;
+  padding: 4px 7px;
+}
+
+blockquote {
+  font-weight: bold;
+  font-style: italic;
+  border-left: solid 10px rgba(7, 116, 141, 0.31);
+  padding: 20px 32px;
+  margin: 16px 0;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  color: rgba(11, 79, 113, 0.46);
+}
+pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+pre > code {
+  font-size: 0.9em;
+}
+
+table {
+  color: #444;
+  font-weight: 200;
+  border-spacing: 0;
+}
+
+.table-container.horizontal-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.table-container.horizontal-scroll table {
+  position: relative;
+  min-width: 600px;
+}
+
+table th {
+  font-weight: 300 !important;
+}
+
+table > tbody {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 10px;
+}
+
+td {
+  vertical-align: top;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+th {
+  border-bottom: solid 2px #ddd;
+}
+
+table tbody tr:hover {
+  background-color: rgba(0, 113, 96, 0.05);
+}
+
+table > tbody tr:last-child > td {
+  border-bottom: solid 1px #eee;
+}
