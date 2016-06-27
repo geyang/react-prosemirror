@@ -5,12 +5,11 @@ import React from "react";
 import Markdown from "react-markdownit";
 
 import Highlight from "react-highlight";
-import Badge from "../../react-doc-components/react-badge";
-import PropsTable from "../../react-doc-components/react-component-props-table";
+import PropsTable from "react-component-props-table";
 
 import HappySandwichMakerExample from "../HappySandwichMaker.example";
 import HappySandwichMakerSource from "!!raw!../HappySandwichMaker.example";
-const HappySandwichMakerAST = require("!!react-docgen!../HappySandwichMaker");
+import HappySandwichMakerAST from "!!react-docgen!../HappySandwichMaker";
 
 export default function Readme({}) {
   return (
@@ -48,7 +47,7 @@ export default function Readme({}) {
       <HappySandwichMakerExample/>
       ### Props
       {`This table below is generated automatically`}
-      <div className="table-container horizontal-scroll">
+      <div className="table-container horizontal-scroll flex-column center">
         <PropsTable propMetaData={HappySandwichMakerAST.props}/>
       </div>
       {`

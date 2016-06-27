@@ -101,7 +101,8 @@ module.exports = {
           return '<pre class="hljs"><code>' +
             hljs.highlight(lang, str, true).value +
             '</code></pre>';
-        } catch (__) {}
+        } catch (__) {
+        }
       }
 
       return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
@@ -112,7 +113,15 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('production')}),
-    new CopyWebpackPlugin([{from: 'src/example/index.html'}]),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/example/index.html'
+      }, {
+        from: 'src/example/typesetting-basic.css'
+      }, {
+        from: 'src/example/using-react-docgen-in-command-line-Screenshot-2016-06-24-11.08.13.png'
+      }
+    ]),
     new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
