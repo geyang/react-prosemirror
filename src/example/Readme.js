@@ -55,6 +55,14 @@ export default function Readme({}) {
 
       The source code below of the example above is loaded using the webpack raw loader.`}
       <Highlight>{HappySandwichMakerSource}</Highlight>
+      {`
+      ## Develop
+
+      1. First make your changes, then git commit. Use \`serve-docs\` to view live update at [http://localhost:5000](http://localhost:5000).
+      2. run \`build-docs\`, \`build-static-docs\`, \`gh-pages\`
+      3. Then remember to push to master.
+
+      `}
     </Markdown>
   )
 }
