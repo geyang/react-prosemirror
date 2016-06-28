@@ -4,7 +4,7 @@
 import React from "react";
 import Markdown from "react-markdownit";
 
-import Highlight from "react-highlight";
+import Highlight from "react-highlight.js";
 import PropsTable from "react-component-props-table";
 
 import HappySandwichMakerExample from "../HappySandwichMaker.example";
