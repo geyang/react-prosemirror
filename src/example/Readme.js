@@ -19,10 +19,18 @@ export default function Readme({}) {
       [![github](https://img.shields.io/github/downloads/episodeyang/react-es6-template/total.svg?style=flat-square&maxAge=2592000)]()
 
       A template repo for react components written with es6 syntax.
-      ## Usage
+
+      ## Usage (as a template)
 
       ~~~shell
-      git clone https://github.com/episodeyang/react-es6-template
+      git clone https://github.com/episodeyang/react-es6-template \<name of your new component\>
+      cd \<name of your new component\>
+      rm -r .git
+
+      # now do your git init, git add/coommit/push
+      # replace "react-es6-template" with your own
+      # replace "react es6 template" with your own
+      # replace "react es6 component" with you own etc.
       ~~~
 
       After cloning from gitHub, you can run the example by doing
