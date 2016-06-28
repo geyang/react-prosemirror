@@ -51,7 +51,7 @@ code {
   font-family: Menlo, Consolas, Monaco, monospace, serif;
 }
 
-div > code, p > code {
+div > code, p > code, li > code, a > code, span > code {
   color: red;
   background-color: #f6f6f6;
   border-radius: 2px;
