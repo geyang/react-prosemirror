@@ -6,7 +6,8 @@ a minimal react es6 template with automatic document generation
 ```shell
 git clone https://github.com/episodeyang/react-es6-template \<name of your new component\>
 cd \<name of your new component\>
-rm -r .git
+rm -rf .git
+rm -rf dist
 
 # now do your git init, git add/coommit/push
 # replace "react-es6-template" with your own
