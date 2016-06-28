@@ -15,7 +15,7 @@
         "plato": "plato -d coverage/plato dist/index.js",
         "test": "npm run istanbul && npm run coveralls",
         "gh-pages": "git add dist && git ci -m 'BUILD DOC' && git subtree push --prefix dist/example origin gh-pages",
-        "gh-pages-force": "git push origin `git subtree split --prefix dist/example`:master --force",
+        "gh-pages-force": "git push origin `git subtree split --prefix dist/example`:gh-pages --force",
         "build-static-docs": "webpack --progress --profile --colors --config webpack.build-static-docs.config.js",
         "build-docs": "webpack --progress --profile --colors --config webpack.build-docs.config.js",
         "serve-docs": "webpack-dev-server --progress --profile --colors --hot --config webpack.develop.config.js"
