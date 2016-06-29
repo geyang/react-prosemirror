@@ -4,7 +4,7 @@
 import React from "react";
 import Markdown from "react-markdownit";
 
-import Highlight from "react-highlight.js";
+import Highlight from "@episodeyang/react-highlight.js";
 import PropsTable from "react-component-props-table";
 
 import HappySandwichMakerExample from "../HappySandwichMaker.example";
@@ -26,7 +26,7 @@ export default function Readme({}) {
       git clone https://github.com/episodeyang/react-es6-template \<name of your new component\>
       cd \<name of your new component\>
       rm -rf .git
-      rm -rf dist 
+      rm -rf dist
 
       # now do your git init, git add/coommit/push
       # replace "react-es6-template" with your own
