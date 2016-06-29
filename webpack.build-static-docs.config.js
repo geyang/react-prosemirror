@@ -27,6 +27,9 @@ module.exports = {
     noParse: [
       /autoit\.js$/
     ],
+    preLoaders: [
+      {test: /\.jsx?$/, loader: 'source-map', exclude: /react-hot-loader/}
+    ],
     loaders: [
       {
         test: /\.html$/,

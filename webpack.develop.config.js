@@ -24,7 +24,8 @@ module.exports = {
   devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
   output: {
     path: '/dist/', //path.join(__dirname, 'gittor'),
-    filename: '[name].js'
+    filename: '[name].js',
+    sourceMapFilename: '[name].js.map'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -32,6 +33,9 @@ module.exports = {
   module: {
     noParse: [
       /autoit\.js$/
+    ],
+    preLoaders: [
+      {test: /\.jsx?$/, loader: 'source-map', exclude: /react-hot-loader/}
     ],
     loaders: [
       {
