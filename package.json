@@ -73,7 +73,7 @@
     "raw-loader": "^0.5.1",
     "react": "15.x",
     "react-addons-test-utils": "^15.1.0",
-    "react-component-props-table": "0.0.0",
+    "react-component-props-table": "0.0.1",
     "react-docgen": "^2.8.2",
     "react-docgen-loader": "^2.9.1",
     "react-dom": "15.x",
@@ -89,6 +89,5 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "react-component-props-table": "0.0.1"
   }
 }
