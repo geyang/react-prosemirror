@@ -87,5 +87,8 @@
     "tape": "4.x",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "react-component-props-table": "0.0.1"
   }
 }
