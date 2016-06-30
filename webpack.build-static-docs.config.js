@@ -18,7 +18,8 @@ module.exports = {
   target: 'node',
   output: {
     path: "dist/example/", //path.join(__dirname, 'gittor'),
-    filename: '[name].js'
+    filename: '[name].js',
+    sourceMapFilename: '[name].js.map'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
