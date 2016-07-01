@@ -12,7 +12,13 @@ require('es6-promise').polyfill();
 const port = 5000;
 
 const build_entry = {
-  app: "./src/example/index.js",
+  app: [
+    `webpack-dev-server/client?http://localhost:${port}`,
+    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',
+    'babel-polyfill',
+    "./src/example/index"
+  ],
   vendor: [
     "react",
     "react-dom"
@@ -35,7 +41,11 @@ module.exports = {
       /autoit\.js$/
     ],
     preLoaders: [
-      {test: /\.jsx?$/, loader: 'source-map', exclude: /react-hot-loader/}
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: 'source-map'
+      }
     ],
     loaders: [
       {
@@ -51,12 +61,12 @@ module.exports = {
       // {
       //   // ES6 modules
       //   test: /luna\-saga\/(.*)\.js$/,
-      //   loaders: ['react-hot', 'babel-loader']
+      //   loaders: ['babel']
       // },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: ['react-hot', 'babel-loader'] // 'regenerator',  for generator syntax
+        loaders: ['babel'] // 'regenerator',  for generator syntax
       },
       {
         test: /\.json$/,
@@ -124,7 +134,16 @@ module.exports = {
     contentBase: "./src/example",
     noInfo: true, //  --no-info option
     hot: true,
-    inline: true
+    inline: false,
+    lazy: false,
+    quiet: true,
+    noInfo: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    states: {
+      colors: true
+    }
     // historyApiFallback: {
     //   index: "/index.html"
     // },
@@ -148,6 +167,8 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"),
-    new webpack.NoErrorsPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({})// provide globals
   ]
 };
