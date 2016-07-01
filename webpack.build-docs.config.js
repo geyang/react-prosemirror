@@ -32,7 +32,11 @@ module.exports = {
       /autoit\.js$/
     ],
     preLoaders: [
-      {test: /\.jsx?$/, loader: 'source-map', exclude: /react-hot-loader/}
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: 'source-map'
+      }
     ],
     loaders: [
       {
@@ -48,12 +52,12 @@ module.exports = {
       // {
       //   // ES6 npm modules
       //   test: /luna\-saga\/(.*)\.js$/,
-      //   loaders: ['react-hot', 'babel-loader']
+      //   loaders: ['babel-loader']
       // },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: ['react-hot', 'babel-loader'] // 'regenerator', for generator syntax
+        loaders: ['babel-loader'] // 'regenerator', for generator syntax
       },
       {
         test: /\.json$/,
