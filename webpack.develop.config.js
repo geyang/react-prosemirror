@@ -137,7 +137,6 @@ module.exports = {
     inline: false,
     lazy: false,
     quiet: true,
-    noInfo: true,
     headers: {
       'Access-Control-Allow-Origin': '*'
     },
