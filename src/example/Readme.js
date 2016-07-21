@@ -13,22 +13,40 @@ import ProseMirrorAST from "!!react-docgen!../ProseMirror";
 
 export default function Readme({}) {
   return (
-    <Markdown stripIndent={true}>{`
+    <Markdown stripIndent={true}>
+      {`
+      # React-ProseMirror demo
+      ## Usage
+      `}
+      <Highlight>{`npm install @episodeyang/react-prosemirror`}</Highlight>
+      {`
       ### How is this README written:
       This readme is written with react and markdown. It includes:
-      1. a **live react component demo**
+      1. a **live react-prosemirror component demo**
       2. a table of the component's props that is generated automatically
       3. **source** of the example component
 
       ## Example Component: \`ProseMirror\`
-      This component makes you a delicious Subway sandwich.
+      This component provides both the selection and the serialized document json object
+      \`onChange\`.
+
+      ### Why is this important?
+      With an input element like this rich text editor, the cursor position ("selection") is part of the component
+      state. Typically when we think of updating the value of such a component we only think of updating
+      the content. However if we do that, the cursor position will be lost each time such update happens,
+      and the user will notice that the cursor jumps to the beginning of the input box on every keystroke.
+
+      With redux's synchronous loop, it is necessary for the component to handle document value change and
+      selection changes together.
+
+      This react component does that.
       `}
-      <ProseMirrorExample/>
       ### Props
       {`This table below is generated automatically`}
       <div className="table-container horizontal-scroll flex-column center">
         <PropsTable propMetaData={ProseMirrorAST.props}/>
       </div>
+      <ProseMirrorExample/>
       {`
       ### Usage Example
 

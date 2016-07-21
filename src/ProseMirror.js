@@ -4,8 +4,8 @@
 import React, {Component, PropTypes} from 'react';
 import {findDOMNode} from 'react-dom';
 import autobind from 'autobind-decorator';
-import prosemirror from 'prosemirror/src/edit'
-import {schema} from 'prosemirror/src/schema-basic';
+import prosemirror from 'prosemirror'
+import {schema} from 'prosemirror/dist/schema-basic';
 
 var {any, func, bool, string, oneOf} = PropTypes;
 

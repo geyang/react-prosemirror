@@ -32,7 +32,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
-        loader: 'source-map'
+        loader: 'source-map-loader'
+      },
+      {
+        test: /prosemirror\/src\//,
+        loaders: ['babel'] // 'regenerator',  for generator syntax
       }
     ],
     loaders: [
