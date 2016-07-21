@@ -5,7 +5,9 @@ npm install @episodeyang/react-prosemirror
 ```
 
 ### How is this README written:
+
 This readme is written with react and markdown. It includes:
+
 1. a **live react-prosemirror component demo**
 2. a table of the component's props that is generated automatically
 3. **source** of the example component
