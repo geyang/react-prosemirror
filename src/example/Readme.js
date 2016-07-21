@@ -46,6 +46,7 @@ export default function Readme({}) {
       <div className="table-container horizontal-scroll flex-column center">
         <PropsTable propMetaData={ProseMirrorAST.props}/>
       </div>
+      ### Demo
       <ProseMirrorExample/>
       {`
       ### Usage Example
