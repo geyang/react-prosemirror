@@ -1,4 +1,10 @@
 # React-ProseMirror demo
+## About this
+
+This is not a fork of react-prosemirror. This is a different react
+wrapper of prosemirror that handles change events and cursors synchronously
+to make it easy to do real-time collaboration in a redux architecture.
+
 ## Usage
 ```
 npm install @episodeyang/react-prosemirror
