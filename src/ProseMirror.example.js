@@ -13,13 +13,11 @@ const style = {
 @autobind
 export default class ProseMirrorExample extends Component {
   componentWillMount() {
-    console.log('will mount');
-    this.setState({doc: undefined, selection: {}});
+    this.setState({doc: undefined, selection: undefined});
   }
 
-  onChange(state) {
-    const {doc, selection} = state;
-    // console.log(doc, selection);
+  onChange(doc, selection) {
+    console.log('onChange: ', doc, selection);
     this.setState({doc, selection})
   }
 

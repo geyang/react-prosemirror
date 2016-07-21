@@ -4,8 +4,8 @@
 import React, {Component, PropTypes} from 'react';
 import {findDOMNode} from 'react-dom';
 import autobind from 'autobind-decorator';
-import prosemirror from 'prosemirror'
-import {schema} from 'prosemirror/dist/schema-basic';
+import prosemirror from 'prosemirror/src/edit'
+import {schema} from 'prosemirror/src/schema-basic';
 
 var {any, func, bool, string, oneOf} = PropTypes;
 
@@ -51,6 +51,7 @@ export default class ProseMirror extends Component {
     const {doc, selection, options} = props;
     if (doc !== this.props.doc || selection !== this.props.selection) {
       console.log('update doc -------------');
+      // todo: more conservative update
       this._updateEditor(doc, selection)
     }
     if (options !== this.props.options) {
@@ -70,28 +71,31 @@ export default class ProseMirror extends Component {
 
   _updateEditor(doc, selection) {
     this._silent = true;
-    this.editor.setDoc(this.editor.schema.nodeFromJSON(doc), new prosemirror.Selection(selection.from, selection.to));
+    this.editor.setDoc(this.editor.schema.nodeFromJSON(doc));
+    this.editor.setTextSelection(selection.from, selection.to);
     this._silent = false;
   }
 
   @autobind
   onChange() {
-    if (this._silent) return;
-    const {onChange} = this.props;
-    if (onChange) onChange({
-      selection: {from: this.editor.selection.from, to: this.editor.selection.to},
-      doc: this.editor.doc.toJSON()
-    });
+    // if (this._silent) return;
+    // const {onChange} = this.props;
+    // const {from, to} = this.editor.selection;
+    // if (onChange) onChange(
+    //   this.editor.doc.toJSON(),
+    //   {from, to}
+    // );
   }
 
   @autobind
   onSelectionChange() {
     if (this._silent) return;
     const {onChange} = this.props;
-    if (onChange) onChange({
-      selection: {from: this.editor.selection.from, to: this.editor.selection.to},
-      doc: this.editor.doc.toJSON()
-    });
+    const {from, to} = this.editor.selection;
+    if (onChange) onChange(
+      this.editor.doc.toJSON(),
+      {from, to}
+    );
   }
 
   render() {
