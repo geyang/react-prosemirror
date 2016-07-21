@@ -4,7 +4,7 @@
 import React, {Component, PropTypes} from "react";
 
 var {number, string} = PropTypes;
-export default class HappySandwichMaker extends Component {
+export default class ProseMirror extends Component {
   static propTypes = {
     style: string.isRequired,
   };

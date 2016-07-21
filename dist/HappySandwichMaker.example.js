@@ -11,9 +11,9 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _HappySandwichMaker = require("./HappySandwichMaker");
+var _ProseMirror = require("./ProseMirror");
 
-var _HappySandwichMaker2 = _interopRequireDefault(_HappySandwichMaker);
+var _ProseMirror2 = _interopRequireDefault(_ProseMirror);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,19 +29,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var number = _react.PropTypes.number;
 var string = _react.PropTypes.string;
 
-var HappySandwichMakerExample = function (_Component) {
-  _inherits(HappySandwichMakerExample, _Component);
+var ProseMirrorExample = function (_Component) {
+  _inherits(ProseMirrorExample, _Component);
 
-  function HappySandwichMakerExample() {
-    _classCallCheck(this, HappySandwichMakerExample);
+  function ProseMirrorExample() {
+    _classCallCheck(this, ProseMirrorExample);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(HappySandwichMakerExample).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ProseMirrorExample).apply(this, arguments));
   }
 
-  _createClass(HappySandwichMakerExample, [{
+  _createClass(ProseMirrorExample, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement(_HappySandwichMaker2.default, { lattice: true,
+      return _react2.default.createElement(_ProseMirror2.default, { lattice: true,
         protein: "turkey",
         cheese: "PepperJack",
         onBite: function onBite() {
@@ -51,7 +51,22 @@ var HappySandwichMakerExample = function (_Component) {
     }
   }]);
 
-  return HappySandwichMakerExample;
+  return ProseMirrorExample;
 }(_react.Component);
 
-exports.default = HappySandwichMakerExample;
+exports.default = ProseMirrorExample;
+;
+
+(function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(number, "number", "src/ProseMirror.example.js");
+
+  __REACT_HOT_LOADER__.register(string, "string", "src/ProseMirror.example.js");
+
+  __REACT_HOT_LOADER__.register(ProseMirrorExample, "ProseMirrorExample", "src/ProseMirror.example.js");
+})();
+
+;

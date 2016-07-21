@@ -48,21 +48,21 @@ var style = {
 /**
  * description of the component
  */
-var HappySandwichMaker = (_temp2 = _class = function (_Component) {
-  _inherits(HappySandwichMaker, _Component);
+var ProseMirror = (_temp2 = _class = function (_Component) {
+  _inherits(ProseMirror, _Component);
 
-  function HappySandwichMaker() {
+  function ProseMirror() {
     var _Object$getPrototypeO;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, HappySandwichMaker);
+    _classCallCheck(this, ProseMirror);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(HappySandwichMaker)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.wisdoms = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(ProseMirror)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.wisdoms = {
       0: { text: "Click Me!", action: "next", color: "#49CAF5" },
       1: { text: "I can make you sandwiches!", action: "next", color: "rgb(251, 155, 165)" },
       2: {
@@ -74,7 +74,7 @@ var HappySandwichMaker = (_temp2 = _class = function (_Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(HappySandwichMaker, [{
+  _createClass(ProseMirror, [{
     key: "componentWillMount",
     value: function componentWillMount() {
       this.setState({ currentIndex: 0 });
@@ -118,7 +118,7 @@ var HappySandwichMaker = (_temp2 = _class = function (_Component) {
     }
   }]);
 
-  return HappySandwichMaker;
+  return ProseMirror;
 }(_react.Component), _class.propTypes = {
   /** Whether we add lattice */
   lattice: bool,
@@ -141,4 +141,25 @@ var HappySandwichMaker = (_temp2 = _class = function (_Component) {
 }, _class.defaultProps = {
   lattice: true
 }, _temp2);
-exports.default = HappySandwichMaker;
+exports.default = ProseMirror;
+;
+
+(function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(func, "func", "src/ProseMirror.js");
+
+  __REACT_HOT_LOADER__.register(bool, "bool", "src/ProseMirror.js");
+
+  __REACT_HOT_LOADER__.register(string, "string", "src/ProseMirror.js");
+
+  __REACT_HOT_LOADER__.register(oneOf, "oneOf", "src/ProseMirror.js");
+
+  __REACT_HOT_LOADER__.register(style, "style", "src/ProseMirror.js");
+
+  __REACT_HOT_LOADER__.register(ProseMirror, "ProseMirror", "src/ProseMirror.js");
+})();
+
+;

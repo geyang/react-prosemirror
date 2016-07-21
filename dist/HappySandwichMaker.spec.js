@@ -26,16 +26,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var number = _react.PropTypes.number;
 var string = _react.PropTypes.string;
-var HappySandwichMaker = (_temp = _class = function (_Component) {
-  _inherits(HappySandwichMaker, _Component);
+var ProseMirror = (_temp = _class = function (_Component) {
+  _inherits(ProseMirror, _Component);
 
-  function HappySandwichMaker() {
-    _classCallCheck(this, HappySandwichMaker);
+  function ProseMirror() {
+    _classCallCheck(this, ProseMirror);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(HappySandwichMaker).apply(this, arguments));
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(ProseMirror).apply(this, arguments));
   }
 
-  _createClass(HappySandwichMaker, [{
+  _createClass(ProseMirror, [{
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -50,8 +50,23 @@ var HappySandwichMaker = (_temp = _class = function (_Component) {
     }
   }]);
 
-  return HappySandwichMaker;
+  return ProseMirror;
 }(_react.Component), _class.propTypes = {
   style: string.isRequired
 }, _temp);
-exports.default = HappySandwichMaker;
+exports.default = ProseMirror;
+;
+
+(function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(number, "number", "src/ProseMirror.spec.js");
+
+  __REACT_HOT_LOADER__.register(string, "string", "src/ProseMirror.spec.js");
+
+  __REACT_HOT_LOADER__.register(ProseMirror, "ProseMirror", "src/ProseMirror.spec.js");
+})();
+
+;
