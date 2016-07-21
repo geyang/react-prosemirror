@@ -17,3 +17,14 @@ var string = (0, _server.renderToString)(_react2.default.createElement(_Readme2.
                                                                                                   */
 
 console.log(string);
+;
+
+(function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(string, 'string', 'src/example/server.js');
+})();
+
+;
