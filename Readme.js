@@ -36,7 +36,7 @@ var _ProseMirror6 = _interopRequireDefault(_ProseMirror5);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); } /**
-                                                                                                                   * Created by ge on 6/24/16.
+                                                                                                                   * Created by ge on 7/21/16.
                                                                                                                    */
 
 
@@ -46,8 +46,13 @@ function Readme(_ref) {
   return _react2.default.createElement(
     _reactMarkdownit2.default,
     { stripIndent: true },
-    "\n      # React ES6 Component Template\n\n      [![github](https://img.shields.io/github/downloads/episodeyang/react-prosemirror/total.svg?style=flat-square&maxAge=2592000)]()\n\n      A template repo for react components written with es6 syntax.\n\n      ## Usage (as a template)\n\n      ~~~shell\n      git clone https://github.com/episodeyang/react-prosemirror <name of your new component>\n      cd <name of your new component>\n      rm -rf .git\n      rm -rf dist\n\n      # now do your git init, git add/coommit/push\n      # replace \"react-prosemirror\" with your own\n      # replace \"react es6 template\" with your own\n      # replace \"react es6 component\" with you own etc.\n      ~~~\n\n      After cloning from gitHub, you can run the example by doing\n      ~~~shell\n      npm run serve-docs\n      ~~~\n\n      And then open your browser at [http://localhost:5000](http://localhost:5000).\n\n      This one calls webpack (you should look at the `package.json` source) and uses the\n      webpack-dev-server to serve from `./src/example/` with hot module reloading.\n\n      ### How is this README written:\n      This readme is written with react and markdown. It includes:\n      1. a **live react component demo**\n      2. a table of the component's props that is generated automatically\n      3. **source** of the example component\n\n      ## Example Component: `ProseMirror`\n      This component makes you a delicious Subway sandwich.\n      ",
-    _react2.default.createElement(_ProseMirror2.default, null),
+    "\n      # React-ProseMirror demo\n      ## Usage\n      ",
+    _react2.default.createElement(
+      _reactHighlight2.default,
+      null,
+      "npm install @episodeyang/react-prosemirror"
+    ),
+    "\n      ### How is this README written:\n      This readme is written with react and markdown. It includes:\n      1. a **live react-prosemirror component demo**\n      2. a table of the component's props that is generated automatically\n      3. **source** of the example component\n\n      ## Example Component: `ProseMirror`\n      This component provides both the selection and the serialized document json object\n      `onChange`.\n\n      ### Why is this important?\n      With an input element like this rich text editor, the cursor position (\"selection\") is part of the component\n      state. Typically when we think of updating the value of such a component we only think of updating\n      the content. However if we do that, the cursor position will be lost each time when such update happens,\n      and the user will notice that the cursor jumps to the beginning of the input box on every keystroke.\n\n      With redux's synchronous loop, it is necessary for the component to handle document value change and\n      selection changes together.\n\n      This react component does that.\n      ",
     "### Props",
     "This table below is generated automatically",
     _react2.default.createElement(
@@ -55,7 +60,9 @@ function Readme(_ref) {
       { className: "table-container horizontal-scroll flex-column center" },
       _react2.default.createElement(_reactComponentPropsTable2.default, { propMetaData: _ProseMirror6.default.props })
     ),
-    "\n      ### Usage Example\n\n      The source code below of the example above is loaded using the webpack raw loader.",
+    "\n      ### Demo\n\n      Below is a live demo. You can open the Chrome React developer tool to look at the updated props.\n      ",
+    _react2.default.createElement(_ProseMirror2.default, null),
+    "\n      ### Known Issues\n\n      There are a few known issues that I am working on. However feel free to file whatever problem you ran into\n      on github! You can get there by clicking the issue tracker on the top right of this page.\n\n      ### Usage Example\n\n      The source code below of the example above is loaded using the webpack raw loader.",
     _react2.default.createElement(
       _reactHighlight2.default,
       null,
