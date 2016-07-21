@@ -1,19 +1,34 @@
-# react-prosemirror
-a minimal react es6 template with automatic document generation
-
-## Usage (as a template)
-
-```shell
-git clone https://github.com/episodeyang/react-prosemirror \<name of your new component\>
-cd \<name of your new component\>
-rm -rf .git
-rm -rf dist
-
-# now do your git init, git add/coommit/push
-# replace "react-prosemirror" with your own
-# replace "react es6 template" with your own
-# replace "react es6 component" with you own etc.
+# React-ProseMirror demo
+## Usage
 ```
+npm install @episodeyang/react-prosemirror
+```
+
+### How is this README written:
+This readme is written with react and markdown. It includes:
+1. a **live react-prosemirror component demo**
+2. a table of the component's props that is generated automatically
+3. **source** of the example component
+
+## Example Component: `ProseMirror`
+This component provides both the selection and the serialized document json object
+`onChange`.
+
+### Why is this important?
+With an input element like this rich text editor, the cursor position ("selection") is part of the component
+state. Typically when we think of updating the value of such a component we only think of updating
+the content. However if we do that, the cursor position will be lost each time such update happens,
+and the user will notice that the cursor jumps to the beginning of the input box on every keystroke.
+
+With redux's synchronous loop, it is necessary for the component to handle document value change and
+selection changes together.
+
+This react component does that.
+
+### Live Demo
+
+please see this live demo here:
+http://www.episodeyang.com/react-prosemirror
 
 ## Develop
 
