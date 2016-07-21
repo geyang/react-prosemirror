@@ -1,5 +1,5 @@
 /**
- * Created by ge on 6/24/16.
+ * Created by ge on 7/21/16.
  */
 import React from "react";
 import Markdown from "react-markdownit";
@@ -33,7 +33,7 @@ export default function Readme({}) {
       ### Why is this important?
       With an input element like this rich text editor, the cursor position ("selection") is part of the component
       state. Typically when we think of updating the value of such a component we only think of updating
-      the content. However if we do that, the cursor position will be lost each time such update happens,
+      the content. However if we do that, the cursor position will be lost each time when such update happens,
       and the user will notice that the cursor jumps to the beginning of the input box on every keystroke.
 
       With redux's synchronous loop, it is necessary for the component to handle document value change and
@@ -45,10 +45,18 @@ export default function Readme({}) {
       {`This table below is generated automatically`}
       <div className="table-container horizontal-scroll flex-column center">
         <PropsTable propMetaData={ProseMirrorAST.props}/>
-      </div>
+      </div>{`
       ### Demo
+
+      Below is a live demo. You can open the Chrome React developer tool to look at the updated props.
+      `}
       <ProseMirrorExample/>
       {`
+      ### Known Issues
+
+      There are a few known issues that I am working on. However feel free to file whatever problem you ran into
+      on github! You can get there by clicking the issue tracker on the top right of this page.
+
       ### Usage Example
 
       The source code below of the example above is loaded using the webpack raw loader.`}

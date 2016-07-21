@@ -2,13 +2,14 @@
  * Created by ge on 6/23/16.
  */
 import React, {Component, PropTypes} from "react";
+import Highlight from '@episodeyang/react-highlight.js';
 import autobind from 'autobind-decorator';
 import ProseMirror from "./ProseMirror";
 
 var {number, string} = PropTypes;
 const style = {
   border: '8px solid pink',
-  height: '500px'
+  height: '200px'
 };
 @autobind
 export default class ProseMirrorExample extends Component {
@@ -23,8 +24,23 @@ export default class ProseMirrorExample extends Component {
 
   render() {
     const {doc, selection} = this.state;
+    var prettifiedDoc = undefined;
+    try {
+      prettifiedDoc = JSON.stringify(doc, null, 4).split('\n')
+        .map(string=>("    " + string)).join('\n').slice(4);
+    } catch (e) {
+      console.log(e);
+    }
     return (
-      <ProseMirror style={style} onChange={this.onChange} doc={doc} selection={selection}/>
+      <div>
+        <ProseMirror style={style} onChange={this.onChange} doc={doc} selection={selection}/>
+        <Highlight>
+{`state = {
+    selection: ${JSON.stringify(selection)},
+    doc: ${prettifiedDoc}
+}`}
+        </Highlight>
+      </div>
     );
   }
 }
