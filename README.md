@@ -34,6 +34,13 @@ http://www.episodeyang.com/react-prosemirror
 
 ## Develop
 
-1. First make your changes, then git commit. Use `serve-docs` to view live updated at [http://localhost:5000](http://localhost:5000)
-2. run `build-docs`, `build-static-docs`, `gh-pages`
-3. Then remember to push to master.
+1. first run `npm install`
+2. now install prosemirror. Because it is a peer dependency, you need to
+   install it separately.
+
+   ```shell
+   npm install prosemirror
+   ```
+3. Now make your changes, then git commit. Use `serve-docs` to view live updated at [http://localhost:5000](http://localhost:5000)
+4. run `build-docs`, `build-static-docs`, `gh-pages`
+5. Then remember to push to master.

@@ -72,32 +72,23 @@ export default class ProseMirror extends Component {
   _updateEditor(doc, selection) {
     this._silent = true;
     this.editor.setDoc(this.editor.schema.nodeFromJSON(doc));
-    var end = selection.from;
-    if (end === selection.head) end = selection.to;
-    this.editor.setTextSelection(end, selection.head);
+    this.editor.setTextSelection(selection.anchor, selection.head);
     this.editor.flush();
     this._silent = false;
   }
 
   @autobind
   onChange() {
-    // if (this._silent) return;
-    // const {onChange} = this.props;
-    // const {from, to} = this.editor.selection;
-    // if (onChange) onChange(
-    //   this.editor.doc.toJSON(),
-    //   {from, to}
-    // );
   }
 
   @autobind
   onSelectionChange() {
     if (this._silent) return;
     const {onChange} = this.props;
-    const {from, to, head} = this.editor.selection;
+    const {anchor, head} = this.editor.selection;
     if (onChange) onChange(
       this.editor.doc.toJSON(),
-      {from, to, head}
+      {anchor, head}
     );
   }
 
