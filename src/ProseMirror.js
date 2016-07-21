@@ -73,6 +73,7 @@ export default class ProseMirror extends Component {
     this._silent = true;
     this.editor.setDoc(this.editor.schema.nodeFromJSON(doc));
     this.editor.setTextSelection(selection.from, selection.to);
+    this.editor.flush();
     this._silent = false;
   }
 
