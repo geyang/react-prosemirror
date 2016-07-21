@@ -32,7 +32,7 @@ This react component does that.
 please see this live demo here:
 http://www.episodeyang.com/react-prosemirror
 
-![react-prosemirror demo](react-prosemirror-demo.gif)
+[![react-prosemirror demo](react-prosemirror-demo.gif)](http://www.episodeyang.com/react-prosemirror)
 
 ## Develop
 
