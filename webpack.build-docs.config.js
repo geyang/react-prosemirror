@@ -133,6 +133,8 @@ module.exports = {
       }, {
         from: 'src/example/typesetting-basic.css'
       }, {
+        from: 'src/example/example.css'
+      }, {
         from: 'src/example/using-react-docgen-in-command-line-Screenshot-2016-06-24-11.08.13.png'
       }
     ]),

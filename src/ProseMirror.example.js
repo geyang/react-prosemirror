@@ -9,7 +9,7 @@ import ProseMirror from "./ProseMirror";
 var {number, string} = PropTypes;
 const style = {
   border: '8px solid pink',
-  height: '200px'
+  minHeight: '200px'
 };
 @autobind
 export default class ProseMirrorExample extends Component {
