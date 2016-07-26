@@ -15,6 +15,8 @@ var {any, func, bool, string, oneOf} = PropTypes;
 export default class ProseMirror extends Component {
 
   static propTypes = {
+    /** a wrapper component */
+    component: oneOf([string]),
     doc: any,
     selection: any,
     onChange: func,
@@ -22,7 +24,8 @@ export default class ProseMirror extends Component {
   };
 
   static defaultProps = {
-    options: {}
+    options: {},
+    component: 'div'
   };
 
   componentWillMount() {
@@ -93,9 +96,10 @@ export default class ProseMirror extends Component {
   }
 
   render() {
-    var {doc, selection, onChange, options, children, ..._props} = this.props;
+    const {doc, selection, onChange, options, children, component, ..._props} = this.props;
+    const Component = component;
     return (
-      <div ref="editorNode" {..._props}></div>
+      <Component ref="editorNode" {..._props}></Component>
     );
   }
 }

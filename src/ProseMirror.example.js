@@ -5,6 +5,7 @@ import React, {Component, PropTypes} from "react";
 import Highlight from '@episodeyang/react-highlight.js';
 import autobind from 'autobind-decorator';
 import ProseMirror from "./ProseMirror";
+import {Flex, FlexItem} from "layout-components";
 
 var {number, string} = PropTypes;
 const style = {
@@ -33,6 +34,12 @@ export default class ProseMirrorExample extends Component {
     }
     return (
       <div>
+        <Flex className="control-group" row>
+          <FlexItem fixed className="control-button">italic</FlexItem>
+          <FlexItem fixed className="control-button">bold</FlexItem>
+          <FlexItem fluid className="spacer"></FlexItem>
+          <FlexItem fixed className="control-button">bold</FlexItem>
+        </Flex>
         <ProseMirror style={style} onChange={this.onChange} doc={doc} selection={selection}/>
         <Highlight>
 {`state = {
