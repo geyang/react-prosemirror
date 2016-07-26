@@ -7,7 +7,7 @@ import autobind from 'autobind-decorator';
 import prosemirror from 'prosemirror'
 import {schema} from 'prosemirror/dist/schema-basic';
 
-var {any, func, bool, string, oneOf} = PropTypes;
+const {any, func, bool, string, node, oneOf} = PropTypes;
 
 /**
  * description of the component
@@ -16,7 +16,7 @@ export default class ProseMirror extends Component {
 
   static propTypes = {
     /** a wrapper component */
-    component: oneOf([string]),
+    component: node,
     doc: any,
     selection: any,
     onChange: func,
@@ -30,20 +30,6 @@ export default class ProseMirror extends Component {
 
   componentWillMount() {
     this.setState({currentIndex: 0});
-  }
-
-  _mountEditor() {
-    const {doc, options} = this.props;
-    this.editorNode = this.refs.editorNode;
-    this.editor = new prosemirror.ProseMirror({
-        place: this.editorNode,
-        schema,
-        doc,
-        ...options
-      }
-    );
-    this.editor.on.change.add(this.onChange);
-    this.editor.on.selectionChange.add(this.onSelectionChange);
   }
 
   componentDidMount() {
@@ -70,6 +56,21 @@ export default class ProseMirror extends Component {
 
   _removeProseMirror() {
     Array.prototype.slice.call(this.editorNode.childNodes).map(this.editorNode.removeChild.bind(this.editorNode));
+  }
+
+  _mountEditor() {
+    console.log('editor is updated ============0--------==========----==========')
+    const {doc, options} = this.props;
+    this.editorNode = this.refs.editorNode;
+    this.editor = new prosemirror.ProseMirror({
+        place: this.editorNode,
+        schema,
+        doc,
+        ...options
+      }
+    );
+    this.editor.on.change.add(this.onChange);
+    this.editor.on.selectionChange.add(this.onSelectionChange);
   }
 
   _updateEditor(doc, selection) {
